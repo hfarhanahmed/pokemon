@@ -1,5 +1,12 @@
 // Pokemon List Datatype
-export type pokemonList = {
-  name: String;
-  url: String;
+export type BaseResponse = {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: Array<PokemonList>;
+};
+
+export type PokemonList = {
+  name: string;
+  url: string;
 };

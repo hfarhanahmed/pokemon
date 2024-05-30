@@ -1,17 +1,27 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { useGetPokemonByIdQuery } from '../../redux/apiServices/pokemonApi';
+import { DetailsRouteProps } from '../../dataTypes/screenNavigationPropsTypes';
+import Loading from './Loading';
+import ErrorView from './ErrorView';
 
-const PokemonDetail = ({ route }) => {
+const PokemonDetail = ({ route }: DetailsRouteProps) => {
   const { id } = route.params;
+
+  // Call API query to fetch pokemon
   const {
     data = null,
     error = null,
     isLoading = false,
   } = useGetPokemonByIdQuery(id);
 
-  if (isLoading) return <Text>Loading...</Text>;
-  if (error) return <Text>Error loading data</Text>;
+  // concat types of pokemon in a single string to show in UI
+  let types: string | undefined = data?.types
+    .map((item) => `${item?.type?.name}`)
+    .join('\n');
+
+  if (isLoading) return <Loading />;
+  if (error) return <ErrorView />;
 
   return (
     <View style={styles.container}>
@@ -21,19 +31,19 @@ const PokemonDetail = ({ route }) => {
       />
       <View style={styles.rowView}>
         <Text style={styles.headerText}>Name</Text>
-        <Text style={styles.detailText}>{data.name}</Text>
+        <Text style={styles.detailText}>{data?.name}</Text>
       </View>
       <View style={styles.rowView}>
         <Text style={styles.headerText}>Height</Text>
-        <Text style={styles.detailText}>{data.height}</Text>
+        <Text style={styles.detailText}>{data?.height}</Text>
       </View>
       <View style={styles.rowView}>
         <Text style={styles.headerText}>Weight</Text>
-        <Text style={styles.detailText}>{data.weight}</Text>
+        <Text style={styles.detailText}>{data?.weight}</Text>
       </View>
       <View style={styles.rowView}>
-        <Text style={styles.headerText}>Base Experience</Text>
-        <Text style={styles.detailText}>{data.base_experience}</Text>
+        <Text style={styles.headerText}>Types</Text>
+        <Text style={styles.detailText}>{types}</Text>
       </View>
     </View>
   );

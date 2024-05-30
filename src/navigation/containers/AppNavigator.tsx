@@ -3,8 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import PokemonListScreen from '../screens/PokemonListScreen';
 import PokemonDetailScreen from '../screens/PokemonDetailScreen';
+import { StackParamList } from '../../dataTypes/screenNavigationPropsTypes';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<StackParamList>();
 
 const AppNavigator = () => {
   return (

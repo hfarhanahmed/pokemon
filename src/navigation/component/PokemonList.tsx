@@ -1,23 +1,23 @@
 import React from 'react';
-import {
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { useGetPokemonListQuery } from '../../redux/apiServices/pokemonApi';
+import { DetailsNavigationProps } from '../../dataTypes/screenNavigationPropsTypes';
+import { useNavigation } from '@react-navigation/native';
+import Loading from './Loading';
+import ErrorView from './ErrorView';
 
-const PokemonList = ({ navigation }) => {
+const PokemonList = () => {
+  const navigation = useNavigation<DetailsNavigationProps>();
+
   const { data, error, isLoading } = useGetPokemonListQuery();
 
-  if (isLoading) return <Text>Loading...</Text>;
-  if (error) return <Text>Error loading data</Text>;
+  if (isLoading) return <Loading />;
+  if (error) return <ErrorView />;
 
   return (
     <FlatList
-      data={data.results}
       keyExtractor={(item) => item.name}
+      data={data?.results}
       renderItem={({ item }) => (
         <TouchableOpacity
           onPress={() => {
@@ -32,7 +32,6 @@ const PokemonList = ({ navigation }) => {
           }}
           style={styles.rowView}
         >
-          <Image source={{ uri: item?.url }} style={{ resizeMode: 'center' }} />
           <Text style={styles.detailText}>{item.name}</Text>
         </TouchableOpacity>
       )}

@@ -2,10 +2,10 @@ import React from 'react';
 import { SafeAreaView } from 'react-native';
 import PokemonList from '../component/PokemonList';
 
-const PokemonListScreen = ({ navigation }) => {
+const PokemonListScreen = () => {
   return (
     <SafeAreaView>
-      <PokemonList navigation={navigation} />
+      <PokemonList />
     </SafeAreaView>
   );
 };
