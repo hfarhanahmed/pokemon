@@ -2,38 +2,38 @@
 
 ## Get started
 
-1. Install dependencies
+1.  Install dependencies
 
-   ```bash
-   npm i --legacy-peer-deps
-   ```
+    ```bash
+    npm i --legacy-peer-deps
+    ```
 
-2. Start the IOS app
+2.  Start the IOS app
 
-   ```bash
-    npm run ios
-   ```
+    ```bash
+     npm run ios
+    ```
 
-3. Start the Android app
+3.  Start the Android app
 
-   ```bash
-    npm run android
-   ```
+    ```bash
+     npm run android
+    ```
 
-4. Start the metro bundler app
+4.  Start the metro bundler app
 
-   ```bash
-    npm run start
-   ```
+    ```bash
+     npm run start
+    ```
 
-#### In the output, you'll find options to open the app in a
+    #### In the output, you'll find options to open the app in a
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+          - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+          - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+          - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+          - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+          You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
 ## Run tests
 
@@ -42,8 +42,6 @@ Run jest tests with coverage
 ```bash
    npm run test
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
 ## Learn more
 
