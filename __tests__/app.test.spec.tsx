@@ -36,18 +36,17 @@ jest.mock('react-native', () => {
   };
 });
 
+jest.mock('react-redux', () => {
+  return {
+    ...jest.requireActual('react-redux'),
+    useSelector: jest.fn().mockImplementation(() => ({})),
+    useDispatch: () => jest.fn(),
+  };
+});
+
 // Todo: will continue to work on this later
 describe('<App />', () => {
   it('renders correctly', () => {
-    jest.mock('react-redux', () => {
-      const redux = jest.requireActual('react-redux');
-      return {
-        ...redux,
-        useSelector: jest.fn().mockImplementation(() => ({})),
-        useDispatch: () => jest.fn(),
-      };
-    });
-
     const tree = renderer.create(<App />).toJSON();
     expect(tree).toMatchSnapshot();
   });

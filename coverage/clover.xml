@@ -1,10 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717072102784" clover="3.2.0">
-  <project timestamp="1717072102784" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="2" coveredelements="2" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
-    <file name="App.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/App.tsx">
+<coverage generated="1717138989605" clover="3.2.0">
+  <project timestamp="1717138989605" name="All files">
+    <metrics statements="41" coveredstatements="30" conditionals="11" coveredconditionals="7" methods="15" coveredmethods="7" elements="67" coveredelements="44" complexity="0" loc="41" ncloc="41" packages="7" files="11" classes="11"/>
+    <package name="pokemon">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="8" count="1" type="stmt"/>
-    </file>
+      <file name="App.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/App.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pokemon.src.dataTypes">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="pokemonListType.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/dataTypes/pokemonListType.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="pokemonType.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/dataTypes/pokemonType.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="screenNavigationPropsTypes.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/dataTypes/screenNavigationPropsTypes.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="pokemon.src.navigation.component">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="ErrorView.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/navigation/component/ErrorView.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+      <file name="Loading.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/navigation/component/Loading.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pokemon.src.navigation.containers">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="AppNavigator.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/navigation/containers/AppNavigator.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="pokemon.src.navigation.screens">
+      <metrics statements="19" coveredstatements="14" conditionals="11" coveredconditionals="7" methods="6" coveredmethods="2"/>
+      <file name="PokemonDetailScreen.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/navigation/screens/PokemonDetailScreen.tsx">
+        <metrics statements="9" coveredstatements="8" conditionals="7" coveredconditionals="5" methods="2" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+      </file>
+      <file name="PokemonListScreen.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/navigation/screens/PokemonListScreen.tsx">
+        <metrics statements="10" coveredstatements="6" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pokemon.src.redux">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="store.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/redux/store.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pokemon.src.redux.apiServices">
+      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="pokemonApi.tsx" path="/Users/hfarhanahmed/Developer/testing Projects/pokemon/src/redux/apiServices/pokemonApi.tsx">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
